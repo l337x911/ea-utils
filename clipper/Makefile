@@ -13,7 +13,7 @@ REL := $(shell svnversion 2>/dev/null | perl -ne 'print $$1 if /(\d+)/' )
 VER := $(shell grep '%define ver' ${PKG}.spec | perl -ne 'print $$1 if / (\S+) *$$/')
 
 SRC=fastq-clipper.cpp fastq-mcf.cpp fastq-multx.cpp fastq-join.cpp fastq-stats.cpp gcModel.cpp
-BIN=fastq-mcf fastq-multx fastq-join fastq-stats fastq-clipper sam-stats varcall
+BIN=fastq-mcf fastq-multx fastq-join fastq-stats fastq-clipper sam-stats
 TOOLS=fastx-graph gtf2bed determine-phred randomFQ alc
 
 all: $(BIN) check
